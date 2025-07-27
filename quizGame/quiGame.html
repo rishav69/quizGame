@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="quizGame.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠 Quiz Master</h1>
+
+        <!-- Setup Screen -->
+        <div class="setup-screen active">
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="">Any Category</option>
+                    <option value="9">General Knowledge</option>
+                    <option value="10">Entertainment: Books</option>
+                    <option value="11">Entertainment: Film</option>
+                    <option value="12">Entertainment: Music</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="18">Science: Computers</option>
+                    <option value="19">Science: Mathematics</option>
+                    <option value="20">Mythology</option>
+                    <option value="21">Sports</option>
+                    <option value="22">Geography</option>
+                    <option value="23">History</option>
+                    <option value="27">Animals</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="">Any Difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Number of Questions:</label>
+                <input type="number" id="amount" min="5" max="50" value="10">
+            </div>
+
+            <button class="btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="quiz-screen">
+            <div class="quiz-info">
+                <div>Question <span id="current-question">1</span> of <span id="total-questions">10</span></div>
+                <div>Score: <span id="current-score">0</span></div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="question-container">
+                <div class="question" id="question-text"></div>
+                <div class="options" id="options"></div>
+            </div>
+
+            <button class="btn" id="next-btn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="results-screen">
+            <h2>🎉 Quiz Complete!</h2>
+            <div class="score-display" id="final-score"></div>
+            <div id="result-message"></div>
+            <button class="btn" onclick="restartQuiz()">Play Again</button>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading" style="display: none;"></div>
+        <div class="error" id="error" style="display: none;"></div>
+    </div>
+
+    <script src="quizGame.js"></script>
+</body>
+
+</html>
