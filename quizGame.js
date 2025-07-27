@@ -145,13 +145,13 @@ function showResults() {
 
     let message = '';
     if (percentage >= 90) {
-        message = '🏆 Outstanding! You\'re a quiz master!';
+        message = ' Outstanding! You\'re a quiz master!';
     } else if (percentage >= 70) {
-        message = '🎯 Great job! Well done!';
+        message = ' Great job! Well done!';
     } else if (percentage >= 50) {
-        message = '👍 Not bad! Keep practicing!';
+        message = ' Not bad! Keep practicing!';
     } else {
-        message = '📚 Better luck next time! Keep learning!';
+        message = ' Better luck next time! Keep learning!';
     }
 
     document.getElementById('result-message').textContent = message;

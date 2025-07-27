@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(90deg, #2a3cff , #764ba2) ;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 2rem;
@@ -27,18 +27,8 @@ body {
     overflow: hidden;
 }
 
-.container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-}
-
 h1 {
-    color: #333;
+    color: #2a3cff;
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
     font-weight: 700;
@@ -67,14 +57,15 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #555;
+    color: #1e2bc0;
 }
 
 select,
 input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e1e5e9;
+    border: 2px solid #00149872;
+    background-color: white;
     border-radius: 10px;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -88,7 +79,7 @@ input:focus {
 }
 
 .btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f6a192;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -103,7 +94,7 @@ input:focus {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 20px #f6a19243;
 }
 
 .btn:active {
@@ -119,15 +110,15 @@ input:focus {
 .question-container {
     margin: 2rem 0;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    background:linear-gradient(90deg,#0015ff19,#764ba219) ;
     border-radius: 15px;
-    border-left: 5px solid #667eea;
+
 }
 
 .question {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #333;
+    color: #19249b;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -151,7 +142,7 @@ input:focus {
 .option:hover {
     border-color: #667eea;
     background: #f8f9ff;
-    transform: translateX(5px);
+    transform: translatey(-3px);
 }
 
 .option.selected {
@@ -178,7 +169,7 @@ input:focus {
     align-items: center;
     margin-bottom: 2rem;
     padding: 1rem;
-    background: rgba(102, 126, 234, 0.1);
+    background: linear-gradient(90deg,#0015ff19,#764ba219) ;
     border-radius: 10px;
 }
 
@@ -193,14 +184,14 @@ input:focus {
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #2a3cff, #764ba2);
     transition: width 0.5s ease;
 }
 
 .score-display {
     font-size: 3rem;
     font-weight: 700;
-    color: #667eea;
+    color: #2a3cff;
     margin: 2rem 0;
 }
 
@@ -209,7 +200,7 @@ input:focus {
     width: 40px;
     height: 40px;
     border: 4px solid #f3f3f3;
-    border-top: 4px solid #667eea;
+    border-top: 4px solid #2a3cff;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 2rem 0;
